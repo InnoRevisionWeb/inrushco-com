@@ -1,0 +1,42 @@
+<!-- Copyright (c) 2026 InRush Co. All Rights Reserved. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 560" fill="none">
+ <defs>
+  <filter id="signal-glow" x="-40%" y="-100%" width="180%" height="300%"><feGaussianBlur stdDeviation="3.2"/></filter>
+ </defs>
+ <g class="board-traces" stroke="#657078" stroke-width="2.5" opacity=".72" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M720 25H543l-58 58H318l-68 68H43"/>
+  <path d="M720 88H581l-35 35H421l-89 89H0"/>
+  <path d="M720 150H624l-63 63H420l-73 73H87l-52 52H0"/>
+  <path d="M720 231H652l-90 90H337l-58 58H60"/>
+  <path d="M720 317H629l-82 82H401l-74 74H160"/>
+  <path d="M720 430H622l-92 92H342"/>
+  <path d="M118 0V77l48 48h120"/>
+  <path d="M303 0v54l71 71"/>
+  <path d="M0 420h142l79-79h137"/>
+ </g>
+ <!-- Traveling luminous pulses follow the actual copper traces. -->
+ <g class="signals" stroke="#a2bbc9" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity=".95">
+  <path class="trace s1" pathLength="100" d="M720 25H543l-58 58H318l-68 68H43"/>
+  <path class="trace s2" pathLength="100" d="M720 88H581l-35 35H421l-89 89H0"/>
+  <path class="trace s3" pathLength="100" d="M720 150H624l-63 63H420l-73 73H87l-52 52H0"/>
+  <path class="trace s4" pathLength="100" d="M720 231H652l-90 90H337l-58 58H60"/>
+  <path class="trace s5" pathLength="100" d="M720 317H629l-82 82H401l-74 74H160"/>
+  <path class="trace s6" pathLength="100" d="M720 430H622l-92 92H342"/>
+  <path class="trace s7" pathLength="100" d="M118 0V77l48 48h120"/>
+  <path class="trace s8" pathLength="100" d="M303 0v54l71 71"/>
+  <path class="trace s9" pathLength="100" d="M0 420h142l79-79h137"/>
+ </g>
+ <g fill="#f4f5f6" stroke="#6e777f" stroke-width="3">
+  <circle cx="250" cy="151" r="9"/><circle cx="318" cy="83" r="9"/>
+  <circle cx="421" cy="123" r="9"/><circle cx="347" cy="286" r="9"/>
+  <circle cx="401" cy="399" r="9"/><circle cx="160" cy="473" r="9"/>
+  <circle cx="286" cy="125" r="9"/><circle cx="530" cy="522" r="9"/>
+ </g>
+ <style>
+  .trace{fill:none;stroke-dasharray:10 90;stroke-dashoffset:100;animation:signal-flow 5.8s linear infinite;filter:drop-shadow(0px 0px 2px #9fb5c4)}
+  .s2{animation-delay:-2s}.s3{animation-delay:-4.2s}.s4{animation-delay:-1s}.s5{animation-delay:-3.1s}
+  .s6{animation-delay:-4.8s}.s7{animation-delay:-2.8s}.s8{animation-delay:-1.5s}.s9{animation-delay:-3.8s}
+  @keyframes signal-flow{from{stroke-dashoffset:110}to{stroke-dashoffset:0}}
+  @media(prefers-reduced-motion:reduce){.trace{animation:none;opacity:.25}}
+ </style>
+</svg>
